@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скачать файл</title>
+    <title>Топ моих любимых модов</title>
     <style>
-        /* Выравнивание кнопки строго по центру экрана */
+        /* Общие стили страницы */
         body {
             margin: 0;
             padding: 0;
@@ -13,41 +13,167 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #1e1e1e;
-            font-family: Arial, sans-serif;
+            background-color: #121212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
         }
 
-        /* Стиль для красивой кнопки */
+        /* Контейнер для ленты */
+        .mod-list-container {
+            width: 450px;
+            max-height: 80vh;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Заголовок списка */
+        .list-header {
+            padding: 20px;
+            background-color: #252526;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 1px solid #333333;
+        }
+
+        /* Скролл-лента */
+        .scroll-list {
+            padding: 15px;
+            overflow-y: auto;
+            flex-grow: 1;
+            /* Стилизация скроллбара для красивого вида */
+            scrollbar-width: thin;
+            scrollbar-color: #555555 #1e1e1e;
+        }
+
+        .scroll-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scroll-list::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+
+        .scroll-list::-webkit-scrollbar-thumb {
+            background-color: #555555;
+            border-radius: 4px;
+        }
+
+        /* Элемент списка (карточка мода) */
+        .mod-item {
+            display: flex;
+            align-items: center;
+            background-color: #2a2a2a;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .mod-item:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        /* Картинка мода */
+        .mod-image {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            background-color: #ffffff;
+            border-radius: 6px;
+            margin-right: 15px;
+        }
+
+        /* Инфо о моде */
+        .mod-info {
+            flex-grow: 1;
+        }
+
+        .mod-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .mod-desc {
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+
+        /* Кнопка скачивания внутри карточки */
         .download-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 8px 14px;
+            font-size: 13px;
             font-weight: bold;
             color: #ffffff;
             background-color: #007bff;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             text-decoration: none;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.2s, transform 0.1s;
+            transition: background-color 0.2s;
+            white-space: nowrap;
         }
 
-        /* Эффект при наведении курсора */
         .download-btn:hover {
             background-color: #0056b3;
-        }
-
-        /* Эффект при клике */
-        .download-btn:active {
-            transform: scale(0.98);
         }
     </style>
 </head>
 <body>
 
-    <!-- Ссылка, оформленная как кнопка, с атрибутом download -->
-    <a href="btv.txt" download="btv.txt" class="download-btn">Скачать btv.txt</a>
+    <div class="mod-list-container">
+        <div class="list-header">⭐ Мой Топ Модов</div>
+        
+        <div class="scroll-list">
+            
+            <!-- Мод 1 -->
+            <div class="mod-item">
+                <img src="health_indicator.png" alt="Health Indicators" class="mod-image">
+                <div class="mod-info">
+                    <div class="mod-name">Health Indicators</div>
+                    <div class="mod-desc">Показывает здоровье над головой игроков</div>
+                </div>
+                <a href="btv.txt" download="btv.txt" class="download-btn">Скачать</a>
+            </div>
+
+            <!-- Мод 2 -->
+            <div class="mod-item">
+                <img src="health_indicator.png" alt="Tiny Hitbox" class="mod-image">
+                <div class="mod-info">
+                    <div class="mod-name">Tiny Hitbox Mod</div>
+                    <div class="mod-desc">Команда /tf для изменения хитбокса</div>
+                </div>
+                <a href="btv.txt" download="btv.txt" class="download-btn">Скачать</a>
+            </div>
+
+            <!-- Мод 3 -->
+            <div class="mod-item">
+                <img src="health_indicator.png" alt="Tweakeroo" class="mod-image">
+                <div class="mod-info">
+                    <div class="mod-name">Tweakeroo Client</div>
+                    <div class="mod-desc">Разнообразные удобные твики</div>
+                </div>
+                <a href="btv.txt" download="btv.txt" class="download-btn">Скачать</a>
+            </div>
+
+            <!-- Мод 4 -->
+            <div class="mod-item">
+                <img src="health_indicator.png" alt="Custom Swords" class="mod-image">
+                <div class="mod-info">
+                    <div class="mod-name">Custom Swords Maker</div>
+                    <div class="mod-desc">Создание кастомных мечей и механик</div>
+                </div>
+                <a href="btv.txt" download="btv.txt" class="download-btn">Скачать</a>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
