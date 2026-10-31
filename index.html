@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать файл</title>
+    <style>
+        /* Выравнивание кнопки строго по центру экрана */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Стиль для красивой кнопки */
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        /* Эффект при наведении курсора */
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Эффект при клике */
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ссылка, оформленная как кнопка, с атрибутом download -->
+    <a href="btv.txt" download="btv.txt" class="download-btn">Скачать btv.txt</a>
+
+</body>
+</html>
